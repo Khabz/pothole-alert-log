@@ -8,12 +8,15 @@ const requiredNumber = {
 };
 
 const logEntrySchema = new Schema({
-    title: {
+    image: {
+        type: String,
+        required: false
+    },
+    fullnames: {
         type: String,
         required: true,
     },
     description: String,
-    image: String,
     latitude: {
         ...requiredNumber,
         min: -90,
@@ -29,10 +32,6 @@ const logEntrySchema = new Schema({
         required: true,
         default: false
     },
-    created_by: {
-        type: String,
-        required: true
-    }
 }, {
     timestamps: true,
 });

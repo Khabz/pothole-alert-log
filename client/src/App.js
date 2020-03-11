@@ -80,8 +80,8 @@ const App = () => {
                 <svg
                   className="marker yellow"
                   style={{
-                    height: `${6 * viewport.zoom}px`,
-                    width: `${6 * viewport.zoom}px`,
+                    height: `${2 * viewport.zoom}px`,
+                    width: `${2 * viewport.zoom}px`,
                   }}
                   version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 512 512">
                   <g>
@@ -105,8 +105,8 @@ const App = () => {
                   onClose={() => setShowPopup({})}
                   anchor="top" >
                   <div className="popup">
-                    <h3>{entry.title}</h3>
-                    <p>{entry.comments}</p>
+                    <h3>{entry.fullnames}</h3>
+                    <p>{entry.description}</p>
                     <small>Report Date: {new Date(entry.createdAt).toLocaleDateString()}</small>
                     {entry.image && <img src={entry.image} alt={entry.title} />}
                   </div>

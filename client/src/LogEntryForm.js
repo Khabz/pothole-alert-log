@@ -35,7 +35,7 @@ const LogEntryForm = ({ location, onClose }) => {
       </div>
       <div className="form-group">
         <label htmlFor="comments">Brief Explanation</label>
-        <textarea className="form-control" name="decription" rows={3} ref={register}></textarea>
+        <textarea className="form-control" name="description" rows={3} ref={register}></textarea>
       </div>
       <button className="btn btn-sm btn-primary" disabled={loading}>{loading ? 'Loading...' : 'Report'}</button>
     </form>
